@@ -1,0 +1,150 @@
+*{
+    /* 1. making all margin =0 ,
+     2. making all padding =0,
+    /* 3.box sizing by default=content box we are making it = border box so that when we define width and height of box
+     it is not only appy on content box but also take padding and border width into account(calculation) */
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+
+body{
+    /* 1. font styling inisde body */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.outer-box{
+    /* 1. width of outer box(div element) =100 view width / 100% view of screen width ,
+    2. height of outer box(div element) =100 view height / 100% view of screen height ,
+    3.background linearly(linear-gradient) increase or decrease color shade  from first color to second color
+       to top left means start from bottom right and go to top left*/
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(to top left,#3ed8ff,#a8f5ff);
+}
+.inner-box{
+    /* 1. width of inner box(div element) in pixel ,
+    2. marign=0 from top and bottom & margin=auto from left and right
+    (margin:auto; will align it in center from left and right with respect to parent element) ,
+    3.position defined relative to parent element ,
+    4.relatively 40% gap from top with respect to parent element(top) ,
+    5.transform: translateY(-50%); means in y axis move upward(-minus) to pixel size = 50 % measurement of element in y axis(element height)
+    6.padding=20px 40px(gap b/w element boder and content inside it from top & bottom =20px from left & right =40px)
+    7.background color of element with opacity(09)
+    8.background linearly(linear-gradient) increase or decrease color shade  from (first color fffff(c0lor) & ff is opacity/transparency) to second color
+       to top left means start from bottom right and go to top left
+    9.backdrop-filter: 8px; defines background element blur when it comes below forward element(visible when forward  elemnt has transperancy)
+    10.border radius
+    11.box shadow(horizontal shadow     vertical shadow      blur in shadow      color of shadow)
+    12.higher the z-index value,more it will towards user
+     */
+    width: 400px;
+    margin: 0 auto;
+    position: relative;
+    top: 40%;
+    transform: translateY(-50%);
+    padding: 20px 40px;
+    background-color: #ffffff09  /* Not work because we defined background below again*/;
+    /* glassomorphic effect --> making an element transparent like glass ffffff33 */
+    background: linear-gradient(to top left,#ffffffff,#ffffff33);
+    backdrop-filter: blur(8px);
+    border-radius: 8px;
+    /* border: 2px solid yellow; */
+    box-shadow: 2px 2px 5px #2773a5;
+    z-index: 2;
+}
+.signup-header h1{
+    /* 1. font size = 2.5rem (2.5 em with respect to root(html having em=1))
+       2. color of text
+       3.font weight of text (by default 400 if no bold is applied) */
+    font-size: 2.5rem;
+    color: #212121;
+    font-weight: 400;
+}
+.signup-header p{
+    /* 1.font size=o.9rem (0.9 em with respect to root(html having em=1)))
+     2.color of text */
+    font-size: 0.9rem;
+    color:#555;
+}
+.signup-body{
+    /* 1.margin=20px from top and bottom & margin = 0 from left and right
+         (This is containing the main content of form / <form> element*/
+    margin: 20px 0;
+}
+.signup-body p{
+    /* 1.margin=10px from top and bottom & margin = 0 from left and right */
+    margin: 10px 0;
+}
+.signup-body p label{
+    /* 1. display = block making an inline element a block element
+    (because label is a inline element may be if input also an inline elment if get space come next after with label)
+     2.font weight of text (by default 400 if no bold is applied) */
+    display: block;
+    font-weight: bold;
+}
+.signup-body p input{
+    /* 1. width of all <input> in 100% with respect to its parent elements
+    2.padding=10px(gap b/w input block boder and content inside it
+    3.border thickness type=solid,dashed,datted and its color
+    4. border radius
+    5. font size=1rem (1 em with respect to root(html having em=1))
+    6. margin from top is 4px with respect to parent element  */
+      
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #cccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 4px;
+}
+.signup-body p input[type="submit"]{
+    /* 1.background color of element
+    2.boder=none will remove border from element
+    3.color of  text in element
+    4. cursor = pointer when cursor come over element */
+    background-color:#3498db;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.signup-body p input[type="submit"]:hover{
+    /* 1. background color when we hover on element */
+    background-color: #2773a5;
+}
+.signup-footer p{
+    /* 1.color of text in element
+    2. text is aligned to center with respect to its parent element */
+    color: #555;
+    text-align: center;
+}
+.signup-footer p a{
+    /* 1. color of text present in anchor tag */
+    color: #2773a5;
+}
+.circle{
+    /* 1.width of element
+    2.heiight of element 
+    3.border radius
+    4.background linearly(linear-gradient) increase or decrease color shade  from first color to second color
+       to top right means start from bottom left and go to top right
+    5.position defined relative to root(html) element / parent element having position = relative
+      (it is floating on screen (it came out of flow of html) */
+    width: 200px;
+    height: 200px;
+    border-radius: 100px;
+    background: linear-gradient(to top right,#ffffff33,#ffffffff);
+    position: absolute;
+}
+.c1{
+    /* 1.relatively 100px gap from top with respect to parent element(top)
+    2.relatively 50px gap from left with respect to parent element(left) */
+    top: 100px;
+    left: 50px;
+}
+.c2{
+    /* 1.relatively 100px gap from top with respect to parent element(top)
+    2.relatively 50px gap from left with respect to parent element(left) */
+    bottom: 100px;
+    right: 50px;
+}
